@@ -10,7 +10,7 @@ type File struct {
 	Comments []string
 	Tree     *Tree
 	Blocks   []Block
-	Index    *Index
+	Index    []Index
 }
 
 // Tree holds structured informations and meta-data
@@ -38,5 +38,6 @@ type Header struct {
 // Index contains pointers to blocks in the form of pairs of
 // byte-offsets (begin, end) inside an ASDF file
 type Index struct {
-	Data [][2]int
+	Beg int
+	End int
 }
