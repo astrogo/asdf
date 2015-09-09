@@ -12,3 +12,8 @@ Use `go get`:
 sh> go get github.com/astrogo/asdf
 ```
 
+## Documentation
+
+Documentation for `asdf` is served by [godoc](https://godoc.org):
+ [godoc.org/github.com/astrogo/asdf](https://godoc.org/github.com/astrogo/asdf)
+
