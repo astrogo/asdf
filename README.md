@@ -1,6 +1,8 @@
 asdf
 ====
 
+[![GoDoc](https://godoc.org/github.com/astrogo/asdf?status.svg)](https://godoc.org/github.com/astrogo/asdf)
+
 `asdf` is a (WIP) pure-Go implementation of the Advanced Scientific Data Format
 (ASDF) as described by the [ASDF standard](https://github.com/spacetelescope/asdf-standard).
 
