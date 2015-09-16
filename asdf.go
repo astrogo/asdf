@@ -4,17 +4,23 @@
 
 package asdf
 
+var (
+	blockMagicToken = []byte("\323BLK")
+	blockIndex      = []byte("#ASDF BLOCK INDEX")
+)
+
 // File holds informations about an ASDF file
 type File struct {
 	Version  string // low-level file format version
 	Comments []string
 	Tree     *Tree
 	Blocks   []Block
-	Index    []Index
+	Index    []uint64
 }
 
 // Tree holds structured informations and meta-data
 type Tree struct {
+	data map[string]interface{}
 }
 
 // Block represents a contiguous chunk of binary data in an ASDF file
@@ -33,11 +39,4 @@ type Header struct {
 	UsedSize    uint64   // amount of used space for the block on disk (not including the header), in bytes
 	DataSize    uint64   // size of the block when decoded, in bytes
 	Checksum    [16]byte // MD5 checksum of the used data in the block
-}
-
-// Index contains pointers to blocks in the form of pairs of
-// byte-offsets (begin, end) inside an ASDF file
-type Index struct {
-	Beg int
-	End int
 }
