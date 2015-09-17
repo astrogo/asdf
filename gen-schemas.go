@@ -8,6 +8,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/serenize/snaker"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -49,11 +50,11 @@ func main() {
 
 	fmt.Printf("\n\n/////\n")
 	tag := strings.Split(schema.Tag, "/")
-	tname := strings.Title(strings.Split(tag[len(tag)-1], "-")[0])
-	fmt.Printf("type %s struct {\n", tname)
+	tname := strings.Split(tag[len(tag)-1], "-")[0]
+	fmt.Printf("type %s struct {\n", snaker.SnakeToCamel(tname))
 	for k, prop := range schema.Properties {
 		fmt.Printf("\t%s %v `yaml:\"%s\"` // %q\n",
-			strings.Title(k),
+			snaker.SnakeToCamel(k),
 			prop.Type, k,
 			strings.TrimSpace(prop.Description),
 		)
