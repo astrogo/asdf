@@ -12,6 +12,7 @@ import (
 	"io"
 	"strings"
 
+	"github.com/astrogo/asdf/schemas/stsci.edu/asdf/core"
 	yaml "gopkg.in/yaml.v2"
 )
 
@@ -81,7 +82,7 @@ comment_loop:
 		}
 		fmt.Printf("=== yaml ===\n%s\n===\n", string(ybuf))
 
-		var ymap map[string]interface{}
+		var ymap core.ASDF
 		err = yaml.Unmarshal(ybuf, &ymap)
 		if err != nil {
 			return f, err

@@ -4,6 +4,10 @@
 
 package asdf
 
+import (
+	"github.com/astrogo/asdf/schemas/stsci.edu/asdf/core"
+)
+
 var (
 	blockMagicToken = []byte("\323BLK")
 	blockIndex      = []byte("#ASDF BLOCK INDEX")
@@ -20,7 +24,8 @@ type File struct {
 
 // Tree holds structured informations and meta-data
 type Tree struct {
-	data map[string]interface{}
+	//data map[string]interface{}
+	data core.ASDF
 }
 
 // Block represents a contiguous chunk of binary data in an ASDF file

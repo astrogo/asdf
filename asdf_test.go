@@ -41,7 +41,7 @@ func TestReader(t *testing.T) {
 		fmt.Printf("file=%q\n", fname)
 		fmt.Printf("f.version=%q\n", f.Version)
 		fmt.Printf("f.comments=%v\n", f.Comments)
-		fmt.Printf("f.tree=%v\n", f.Tree)
+		fmt.Printf("f.tree=%#v\n", f.Tree)
 		fmt.Printf("f.blocks=%v\n", f.Blocks)
 		fmt.Printf("f.index=%v\n", f.Index)
 	}
