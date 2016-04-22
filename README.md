@@ -20,3 +20,9 @@ sh> go get github.com/astrogo/asdf
 Documentation for `asdf` is served by [godoc](https://godoc.org):
  [godoc.org/github.com/astrogo/asdf](https://godoc.org/github.com/astrogo/asdf)
 
+## Contribute
+
+`astrogo/asdf` is released under the `BSD-3` license.
+Please send a pull request to [astrogo/license](https://github.com/astrogo/license), adding
+yourself to the `AUTHORS` and/or `CONTRIBUTORS` files.
+
